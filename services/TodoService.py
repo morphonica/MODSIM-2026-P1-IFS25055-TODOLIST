@@ -23,22 +23,3 @@ class TodoService():
         success = self.todo_repository.remove_todo(id)
         if not success:
             print(f"[!] Gagal menghapus todo dengan ID: {id}.")
-
-def update_todo(self, id: int, title: str, is_finished: bool):
-    success = self.todo_repository.update_todo(id, title, is_finished)
-    if not success:
-        print(f"[!] Todo dengan ID {id} tidak ditemukan.")
-
-
-def search_todo(self, keyword: str):
-    results = self.todo_repository.search_todo(keyword)
-    if not results:
-        print("- Todo tidak ditemukan.")
-        return
-    print("Hasil Pencarian:")
-    for todo in results:
-        print(todo)
-
-
-def sort_todo(self, by: str):
-    self.todo_repository.sort_todo(by)

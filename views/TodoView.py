@@ -58,42 +58,15 @@ class TodoView:
 
     def update_todo(self):
         print("[Mengubah Todo]")
-        str_id = InputUtil.input("ID Todo (x Jika Batal)")
-
-        if str_id.lower() == "x":
-            return
-
-        try:
-            todo_id = int(str_id)
-            title = InputUtil.input("Judul Baru")
-            status = InputUtil.input("Status (1=Selesai, 0=Belum)")
-
-            is_finished = True if status == "1" else False
-            self.todo_service.update_todo(todo_id, title, is_finished)
-
-        except ValueError:
-            print("[!] Input tidak valid.")
-
-
+        # TODO: implement update functionality
+        pass
 
     def search_todo(self):
         print("[Mencari Todo]")
-        keyword = InputUtil.input("Kata Kunci")
-        self.todo_service.search_todo(keyword)
-
+        # TODO: implement search functionality
+        pass
 
     def sort_todo(self):
         print("[Mengurutkan Todo]")
-        print("1. Berdasarkan Judul")
-        print("2. Berdasarkan Status")
-
-        choice = InputUtil.input("Pilih")
-        if choice == "1":
-            self.todo_service.sort_todo("title")
-        elif choice == "2":
-            self.todo_service.sort_todo("status")
-        else:
-            print("[!] Pilihan tidak valid.")
-
-
-
+        # TODO: implement sort functionality
+        pass
